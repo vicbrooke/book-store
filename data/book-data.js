@@ -6,6 +6,7 @@ const books = [
     price: 9.99,
     rating: 4.3,
     reviews: 0,
+    AuthorId: 1,
   },
   {
     title: "The Bullet That Missed",
@@ -15,6 +16,7 @@ const books = [
     price: 10.0,
     rating: 4.7,
     reviews: 0,
+    AuthorId: 2,
   },
   {
     title: "22 Seconds",
@@ -23,6 +25,7 @@ const books = [
     price: 9.99,
     rating: 4.5,
     reviews: 0,
+    AuthorId: 3,
   },
   {
     title: "Verity",
@@ -32,6 +35,7 @@ const books = [
     price: 4.5,
     rating: 4.5,
     reviews: 0,
+    AuthorId: 4,
   },
 
   {
@@ -41,6 +45,7 @@ const books = [
     price: 11.99,
     rating: 4.7,
     reviews: 0,
+    AuthorId: 5,
   },
   {
     title: "Fire and Blood - A Song of Ice and Fire",
@@ -50,6 +55,7 @@ const books = [
     price: 7.99,
     rating: 3.5,
     reviews: 0,
+    AuthorId: 6,
   },
   {
     title: "Three Sisters",
@@ -59,6 +65,7 @@ const books = [
     price: 7.49,
     rating: 4.5,
     reviews: 0,
+    AuthorId: 10,
   },
   {
     title: "Pride and Prejudice",
@@ -68,6 +75,7 @@ const books = [
     price: 14.99,
     rating: 4.8,
     reviews: 0,
+    AuthorId: 7,
   },
   {
     title: "Little Women",
@@ -77,6 +85,7 @@ const books = [
     price: 14.99,
     rating: 4.8,
     reviews: 0,
+    AuthorId: 8,
   },
   {
     title: "Lioness: My Journey to Glory",
@@ -86,6 +95,7 @@ const books = [
     price: 16.99,
     rating: 5.0,
     reviews: 0,
+    AuthorId: 9,
   },
 ];
 
