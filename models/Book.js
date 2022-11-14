@@ -15,6 +15,8 @@ Book.init(
     },
     image: {
       type: DataTypes.STRING,
+      defaultValue:
+        "https://audioaz.com/_next/image?url=https%3A%2F%2Faudioaz.com%2Fimages%2Fbookcover.jpg&w=384&q=75",
     },
     genre: {
       type: DataTypes.STRING,
@@ -26,11 +28,11 @@ Book.init(
     },
     rating: {
       type: DataTypes.FLOAT,
-      allowNull: false,
+      defaultValue: 0,
     },
     reviews: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      defaultValue: 0,
     },
   },
   { sequelize: db }
