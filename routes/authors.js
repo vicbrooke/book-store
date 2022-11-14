@@ -27,7 +27,7 @@ authorRouter.delete("/:id", async (req, res) => {
       name: authorName,
     },
   });
-  res.status(204).send(`${authorName} successfully deleted`);
+  res.status(202).send(`'${authorName}' was successfully deleted`);
 });
 
 module.exports = authorRouter;
