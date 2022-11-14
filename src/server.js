@@ -6,6 +6,8 @@ const authorRouter = require("../routes/authors");
 const bookRouter = require("../routes/books");
 const customerRouter = require("../routes/customers");
 
+app.use(express.json());
+
 app.use("/authors", authorRouter);
 app.use("/books", bookRouter);
 app.use("/customers", customerRouter);
