@@ -1,6 +1,6 @@
 const books = [
   {
-    title: "the girls who disappeared",
+    title: "The Girls Who Disappeared",
     image: "https://m.media-amazon.com/images/I/51pD-JvYH0L._SY346_.jpg",
     genre: "mystery",
     price: 9.99,
@@ -8,7 +8,7 @@ const books = [
     reviews: 0,
   },
   {
-    title: "the bullet that missed",
+    title: "The Bullet That Missed",
     image:
       "https://m.media-amazon.com/images/I/51mqUQxstoL._SX323_BO1,204,203,200_.jpg",
     genre: "mystery",
@@ -17,7 +17,7 @@ const books = [
     reviews: 0,
   },
   {
-    title: "22 seconds",
+    title: "22 Seconds",
     image: "https://m.media-amazon.com/images/I/51jyXb9vahL._SY346_.jpg",
     genre: "mystery",
     price: 9.99,
@@ -25,7 +25,7 @@ const books = [
     reviews: 0,
   },
   {
-    title: "verity",
+    title: "Verity",
     image:
       "https://m.media-amazon.com/images/I/51sfWeyiskL._SX316_BO1,204,203,200_.jpg",
     genre: "thriller",
@@ -35,7 +35,7 @@ const books = [
   },
 
   {
-    title: "desert star",
+    title: "Desert Star",
     image: "https://m.media-amazon.com/images/I/51StbfuRowL._SY346_.jpg",
     genre: "thriller",
     price: 11.99,
@@ -43,7 +43,7 @@ const books = [
     reviews: 0,
   },
   {
-    title: "fire and blood - A song of ice and fire",
+    title: "Fire and Blood - A Song of Ice and Fire",
     image:
       "https://cdn.waterstones.com/bookjackets/large/9780/0084/9780008402785.jpg",
     genre: "fantasy",
@@ -52,7 +52,7 @@ const books = [
     reviews: 0,
   },
   {
-    title: "three sisters",
+    title: "Three Sisters",
     image:
       "https://cdn.waterstones.com/bookjackets/large/9781/8387/9781838774592.jpg",
     genre: "historical fiction",
@@ -61,7 +61,7 @@ const books = [
     reviews: 0,
   },
   {
-    title: "pride and prejudice",
+    title: "Pride and Prejudice",
     image:
       "https://cdn.waterstones.com/override/v1/large/9780/1410/9780141040349.jpg",
     genre: "classic",
@@ -70,7 +70,7 @@ const books = [
     reviews: 0,
   },
   {
-    title: "little women",
+    title: "Little Women",
     image:
       "https://m.media-amazon.com/images/P/0147514010.01._SCLZZZZZZZ_SX500_.jpg",
     genre: "classic",
@@ -79,7 +79,7 @@ const books = [
     reviews: 0,
   },
   {
-    title: "lioness: my journey to glory",
+    title: "Lioness: My Journey to Glory",
     image:
       "https://cdn.waterstones.com/bookjackets/large/9781/3996/9781399611671.jpg",
     genre: "autobiography",
