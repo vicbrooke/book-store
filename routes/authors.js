@@ -1,6 +1,7 @@
 const { Router } = require("express");
 
 const Author = require("../models/Author");
+const Book = require("../models/Book");
 
 const authorRouter = Router();
 
@@ -12,6 +13,11 @@ authorRouter.get("/", async (req, res) => {
 authorRouter.get("/:id", async (req, res) => {
   const singleAuthor = await Author.findByPk(req.params.id);
   res.status(302).send(singleAuthor);
+});
+
+authorRouter.get("/:id/books", async (req, res) => {
+  const booksByAuthor = await Author.findByPk(req.params.id, { include: Book });
+  res.status(302).send(booksByAuthor.Books);
 });
 
 authorRouter.post("/", async (req, res) => {
