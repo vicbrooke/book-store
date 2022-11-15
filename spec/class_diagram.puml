@@ -1,0 +1,40 @@
+@startuml classDiagram
+
+Author --> Book : add book
+Customer --> Book : buy book
+Customer --> Book : add review
+Customer --> Book : update rating
+
+class Author {
+    +string name
+
+    +addAuthor()
+    +removeAuthor()
+}
+
+class Book {
+    +string title
+    +string image
+    +string genre
+    +number price
+    +number rating
+    +number reviews
+
+    +addBook()
+    +removeBook()
+    +addReview()
+    +removeReviews()
+    +updateRating()
+}
+
+class Customer {
+    +string username
+    +string email
+
+    +addCustomer()
+    +removeCustomer()
+    +updateCustomer()
+    +buyBook()
+}
+
+@endUml

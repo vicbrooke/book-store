@@ -1,0 +1,20 @@
+@startuml use_case
+left to right direction
+actor Author as a
+actor Book as b
+actor Customer as c
+
+
+c --> b: buyBook()
+c --> b: addReview()
+c --> b: removeReview()
+c --> b: addRating()
+c --> c: updateCustomer()
+
+b --> a: addAuthor()
+
+b --> b: updateBook()
+
+
+
+@enduml
