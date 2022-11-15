@@ -1,0 +1,28 @@
+@startuml sequenceDiagram
+
+Customer -> BookShopApp: addCustomer
+
+alt successful case
+
+    BookShopApp --> Customer: console.log - "customer has been registered"
+
+else if customer already registered
+
+    BookShopApp --> Customer: console.log - "customer already registered"
+
+end
+
+Customer -> Book: buyBook()
+
+alt successful case
+
+    Book --> Customer: console.log - "You have purchased (name of book)"
+
+else if book doesn't exist
+
+    Book --> Customer: throw Error - "Book not available, choose another"
+
+end
+
+
+@enduml
