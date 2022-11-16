@@ -1,27 +1,47 @@
 const url = "http://localhost:5001";
-const bookList = document.querySelector(".book-list");
 const bookContainer = document.querySelector(".book-container");
+const genreDropdown = document.querySelector("#genre");
+const genreBtn = document.querySelector(".genre-btn");
 
 document.addEventListener("DOMContentLoaded", (e) => {
+  // fetch runs in the browser so needs to be in a script.js file
   fetch(`${url}/books`)
     .then((res) => res.json())
     .then(({ allBooks }) =>
       allBooks.map((book) => {
         const listItem = document.createElement("li");
-        const title = document.createElement("h3");
-        const image = document.createElement("img");
-        image.setAttribute("class", "book-image");
-        const genre = document.createElement("p");
-        const price = document.createElement("p");
-        const rating = document.createElement("p");
-        const reviews = document.createElement("p");
-        title.innerText = book.title;
-        image.src = book.image;
-        genre.innerText = `Genre: ${book.genre}`;
-        price.innerText = `Price: ${book.price}`;
-        rating.innerText = `Rating: ${book.rating}`;
-        reviews.innerText = `Reviews: ${book.reviews}`;
-        listItem.append(title, image, genre, price, rating, reviews);
+        listItem.innerHTML = `<h3>${book.title}</h3> <img src="${book.image}" class="book-image"> <p>Genre: ${book.genre}</p> <p>Price: ${book.price}</p> <p>Rating: ${book.rating}</p> <p>Reviews: ${book.reviews}</p>`;
+        bookContainer.append(listItem);
+      })
+    );
+});
+
+async function setGenres() {
+  let genreList = [];
+  await fetch(`${url}/books`)
+    .then((res) => res.json())
+    .then(({ allBooks }) => allBooks.map((book) => genreList.push(book.genre)));
+  let genres = [...new Set(genreList)];
+  genres.sort();
+  genres.map((genre) => {
+    const option = document.createElement("option");
+    option.innerText = genre;
+    option.setAttribute("value", genre);
+    genreDropdown.append(option);
+  });
+}
+
+setGenres();
+
+genreBtn.addEventListener("click", () => {
+  const value = document.querySelector("#genre").value;
+  bookContainer.innerHTML = "";
+  fetch(`${url}/books/genres/${value}`)
+    .then((res) => res.json())
+    .then(({ booksByGenre }) =>
+      booksByGenre.map((book) => {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<h3>${book.title}</h3> <img src="${book.image}" class="book-image"> <p>Genre: ${book.genre}</p> <p>Price: ${book.price}</p> <p>Rating: ${book.rating}</p> <p>Reviews: ${book.reviews}</p>`;
         bookContainer.append(listItem);
       })
     );

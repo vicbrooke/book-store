@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <Set-cookie: SameSite="Strict" />
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Book Shop</title>
   </head>
   <body>
@@ -14,6 +14,11 @@
       <h1>Book Shop</h1>
     </header>
     <main>
+      <nav>
+        <label for="genre" class="genre">Filter by genre</label>
+        <select name="genre" id="genre" class="genre"></select>
+        <button class="genre-btn genre">Submit</button>
+      </nav>
       <section class="book-container">
         <ul class="book-list"></ul>
       </section>
