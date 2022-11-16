@@ -16,7 +16,26 @@ main {
   height: 100%;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  width: 25vw;
+}
+
 .book-container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-end;
+}
+
+.book-image {
+  max-width: 20vw;
 }
