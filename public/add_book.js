@@ -29,7 +29,6 @@ submitBookBtn.addEventListener("click", async () => {
   if (reviews !== "") {
     Object.assign(body, { reviews: reviews });
   }
-  console.log(body);
   await fetch(`${url}/books`, {
     method: "POST",
     headers: {
@@ -39,7 +38,6 @@ submitBookBtn.addEventListener("click", async () => {
   })
     .then((res) => res.json())
     .then(({ newBook }) => {
-      console.log(newBook);
       const addedBook = document.createElement("div");
       addedBook.innerHTML = `
   <h3>Congrats, your book was added!</h3>
