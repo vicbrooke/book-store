@@ -15,6 +15,7 @@ Book.init(
     },
     image: {
       type: DataTypes.STRING,
+      allowNull: false,
       defaultValue:
         "https://audioaz.com/_next/image?url=https%3A%2F%2Faudioaz.com%2Fimages%2Fbookcover.jpg&w=384&q=75",
     },

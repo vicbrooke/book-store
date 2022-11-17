@@ -9,14 +9,110 @@ body {
 
 header {
   width: 100%;
+  border-bottom: solid black 1px;
 }
 
 main {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  min-width: 15vw;
+  max-width: 90vw;
+}
+
+h3 {
+  max-width: 15vw;
+}
 .book-container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-end;
+  margin-left: 4vw;
+}
+
+.book-image {
+  max-width: 20vw;
+  height: 20vh;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  border-right: solid black 1px;
+}
+
+.genre {
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.new-book-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.new-book {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: flex-end;
+  margin-right: 35vw;
+}
+
+.new-book-input {
+  margin: 1vw;
+}
+
+input {
+  height: 3vw;
+  width: 20vw;
+}
+
+.author-image {
+  max-width: 20vw;
+  height: 20vh;
+}
+
+.authors-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-end;
+  margin-left: 4vw;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-books-btn {
+  margin: 1vw;
+}
+
+.author-books {
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
 }
