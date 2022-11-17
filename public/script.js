@@ -2,6 +2,7 @@ const url = "http://localhost:5001";
 const bookContainer = document.querySelector(".book-container");
 const genreDropdown = document.querySelector("#genre");
 const genreBtn = document.querySelector(".genre-btn");
+const addBookBtn = document.querySelector(".add-book-btn");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // fetch runs in the browser so needs to be in a script.js file

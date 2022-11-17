@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="add_book.js" defer></script>
+    <title>Book Shop</title>
+  </head>
+  <body>
+    <header>
+      <h1>Book Shop</h1>
+    </header>
+    <main>
+      <nav>
+        <label for="genre" class="genre">Filter by genre</label>
+        <select name="genre" id="genre" class="genre"></select>
+        <button class="genre-btn genre">Submit</button>
+        <button class="add-book genre">Add book</button>
+      </nav>
+      <section class="new-book-container">
+        <h3>Add a new book</h3>
+        <div class="new-book">
+            <div class="new-book-input">
+                <label for="bkTitle">Title:</label>
+                <input id="bkTitle" placeholder="required" value="">
+            </div>
+            <div class="new-book-input">
+                <label for="bkImage">Image:</label>
+                <input id="bkImage" value="">
+            </div>
+            <div class="new-book-input">
+                <label for="bkGenre">Genre:</label>
+                <input id="bkGenre" placeholder="required" value="">
+            </div>
+            <div class="new-book-input">
+                <label for="bkPrice">Price:</label>
+                <input id="bkPrice" placeholder="required" value="">
+            </div>
+            <div class="new-book-input">
+                <label for="bkRating">Rating:</label>
+                <input id="bkRating" value="">
+            </div>
+            <div class="new-book-input">
+                <label for="bkReviews">Reviews:</label>
+                <input id="bkReviews" value="">
+            </div>
+            <div class="new-book-input">
+                <button class="submit-book">Submit book</button>
+            </div>
+        </div>
+      </section>
+      </section>
+    </main>
+  </body>
+</html>
