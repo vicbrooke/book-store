@@ -25,8 +25,6 @@ bookRouter.post("/", async (req, res) => {
   const { title, author, image, genre, price, rating, reviews } = req.body;
   let bkAuthor = await Author.findOne({ where: { name: author } });
 
-  console.log(bkAuthor);
-
   if (!bkAuthor) {
     await Author.create({ name: author });
     bkAuthor = await Author.findOne({ where: { name: author } });
