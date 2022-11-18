@@ -4,6 +4,7 @@ const url = "http://localhost:5001";
 
 submitBookBtn.addEventListener("click", async () => {
   const title = document.getElementById("bkTitle").value;
+  const author = document.getElementById("bkAuthor").value;
   const image = document.getElementById("bkImage").value;
   const genre = document.getElementById("bkGenre").value;
   const price = document.getElementById("bkPrice").value;
@@ -13,6 +14,9 @@ submitBookBtn.addEventListener("click", async () => {
   const body = {};
   if (title !== "") {
     Object.assign(body, { title: title });
+  }
+  if (author !== "") {
+    Object.assign(body, { author: author });
   }
   if (image !== "") {
     Object.assign(body, { image: image });
