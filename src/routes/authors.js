@@ -20,6 +20,14 @@ authorRouter.get("/:id/books", async (req, res) => {
   res.status(302).send(booksByAuthor.Books);
 });
 
+authorRouter.put("/:id", async (req, res) => {
+  await Author.update(req.body, {
+    where: { id: req.params.id },
+  });
+  const updatedAuthor = await Author.findByPk(req.params.id);
+  res.status(202).send({ updatedAuthor });
+});
+
 authorRouter.post("/", async (req, res) => {
   const newAuthor = await Author.create(req.body);
   res.status(201).send(newAuthor);

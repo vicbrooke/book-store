@@ -171,3 +171,21 @@ input {
   flex-direction: column;
   margin: 2vw;
 }
+
+.view-authors {
+  justify-self: flex-start;
+}
+
+/* edit author styling */
+
+.edit-author-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.new-author-input {
+  margin: 1vw;
+}
