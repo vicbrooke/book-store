@@ -4,6 +4,7 @@ const url = "http://localhost:5001";
 
 submitBookBtn.addEventListener("click", async () => {
   const title = document.getElementById("bkTitle").value;
+  const author = document.getElementById("bkAuthor").value;
   const image = document.getElementById("bkImage").value;
   const genre = document.getElementById("bkGenre").value;
   const price = document.getElementById("bkPrice").value;
@@ -12,16 +13,27 @@ submitBookBtn.addEventListener("click", async () => {
 
   const body = {};
   if (title !== "") {
-    Object.assign(body, { title: title });
+    let words = title.split(" ");
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+    words = words.join(" ");
+    console.log(words);
+    Object.assign(body, { title: words });
+  }
+  if (author !== "") {
+    Object.assign(body, { author: author });
   }
   if (image !== "") {
     Object.assign(body, { image: image });
   }
   if (genre !== "") {
-    Object.assign(body, { genre: genre });
+    Object.assign(body, { genre: genre.toLowerCase() });
   }
   if (price !== "") {
-    Object.assign(body, { price: price });
+    const newPrice = Number(price).toFixed(2);
+    console.log(newPrice, typeof newPrice);
+    Object.assign(body, { price: newPrice });
   }
   if (rating !== "") {
     Object.assign(body, { rating: rating });
@@ -40,7 +52,7 @@ submitBookBtn.addEventListener("click", async () => {
     .then(({ newBook }) => {
       const addedBook = document.createElement("div");
       addedBook.innerHTML = `
-  <h3>Congrats, your book was added!</h3>
+  <h2>Congrats, your book was added!</h2>
   <div class="book-title">${newBook.title}</div>
   <p>Go to the <a href="index.html">home page</a> to view all books.</p>
   `;

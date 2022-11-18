@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const Book = require("../models/Book");
+const { Book, Author } = require("../models");
 
 const bookRouter = Router();
 
@@ -22,7 +22,24 @@ bookRouter.get("/genres/:genre", async (req, res) => {
 });
 
 bookRouter.post("/", async (req, res) => {
-  const newBook = await Book.create(req.body);
+  const { title, author, image, genre, price, rating, reviews } = req.body;
+  let bkAuthor = await Author.findOne({ where: { name: author } });
+
+  if (!bkAuthor) {
+    await Author.create({ name: author });
+    bkAuthor = await Author.findOne({ where: { name: author } });
+  }
+
+  let newBook = await Book.create({
+    title: title,
+    image: image,
+    genre: genre,
+    price: price,
+    rating: rating,
+    reviews: reviews,
+    AuthorId: bkAuthor.id,
+  });
+
   res.status(201).send({ newBook });
 });
 

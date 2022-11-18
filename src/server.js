@@ -1,6 +1,5 @@
 const express = require("express");
 const seed = require("./db/seed");
-const cors = require("cors");
 
 const app = express();
 
@@ -9,9 +8,7 @@ const bookRouter = require("./routes/books");
 const customerRouter = require("./routes/customers");
 
 app.use(express.json());
-app.use(cors());
-app.use(express.urlencoded({ extended: false }));
-app.use("/", express.static("public", { extensions: ["html"] }));
+app.use(express.static("public"));
 
 app.use("/authors", authorRouter);
 app.use("/books", bookRouter);

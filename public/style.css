@@ -1,15 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&display=swap");
+
+/* general styling */
+
 body {
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-header {
-  width: 100%;
-  border-bottom: solid black 1px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fef9f8;
 }
 
 main {
@@ -18,6 +19,43 @@ main {
   display: flex;
   flex-direction: row;
 }
+
+a {
+  border: solid grey 1px;
+  background-color: #fef9f8;
+  text-decoration: none;
+  color: black;
+  min-width: 15vw;
+}
+
+button {
+  border: solid grey 1px;
+  background-color: #fef9f8;
+  width: 10vw;
+  height: 2.5vw;
+}
+
+label {
+  font-size: larger;
+}
+
+select {
+  width: 10vw;
+  height: 2.5vw;
+}
+
+/* header styling */
+header {
+  width: 100%;
+  background-color: #ef9273;
+}
+
+h1 {
+  font-family: "Fugaz One", cursive;
+  font-size: 5vw;
+}
+
+/* book list styling */
 
 ul {
   list-style: none;
@@ -34,6 +72,7 @@ li {
 h3 {
   max-width: 15vw;
 }
+
 .book-container {
   width: 100%;
   height: 100%;
@@ -45,21 +84,29 @@ h3 {
 }
 
 .book-image {
-  max-width: 20vw;
   height: 20vh;
 }
+
+/* nav styling */
 
 nav {
   display: flex;
   flex-direction: column;
   width: 20vw;
-  border-right: solid black 1px;
+  height: 100vh;
+  background-color: #ef9273;
 }
 
 .genre {
   margin: 10px;
   margin-top: 20px;
 }
+
+.filter {
+  padding: 3vw 0vw;
+}
+
+/* add book page styling */
 
 .new-book-container {
   align-items: center;
@@ -81,10 +128,16 @@ nav {
   margin: 1vw;
 }
 
+.submit-btn {
+  align-self: center;
+}
+
 input {
   height: 3vw;
   width: 20vw;
 }
+
+/* author page styling */
 
 .author-image {
   max-width: 20vw;
@@ -106,6 +159,8 @@ input {
   flex-direction: column;
   align-items: center;
 }
+
+/* authors books styling */
 
 .view-books-btn {
   margin: 1vw;

@@ -22,11 +22,14 @@ const viewBooks = async (id) => {
   link.setAttribute("href", "view_authors.html");
   link.innerText = "Go back to Authors page";
   authorsContainer.append(link);
+  const bookContainer = document.createElement("div");
+  bookContainer.className = "book-container";
   authorsContainer.className = "author-books";
   books.map((book) => {
     const listItem = document.createElement("li");
+    listItem.className = "book-item";
     listItem.innerHTML = `<h3>${book.title}</h3> <img src="${book.image}" class="book-image"> <p>Genre: ${book.genre}</p> <p>Price: ${book.price}</p> <p>Rating: ${book.rating}</p> <p>Reviews: ${book.reviews}</p>`;
-
-    authorsContainer.append(listItem);
+    bookContainer.append(listItem);
+    authorsContainer.append(bookContainer);
   });
 };

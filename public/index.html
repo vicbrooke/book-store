@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <title>Book Shop</title>
+    <title>My Library</title>
   </head>
   <body>
     <header>
-      <h1>Book Shop</h1>
+      <h1>My Library</h1>
     </header>
     <main>
       <nav>
-        <label for="genre" class="genre">Filter by genre</label>
-        <select name="genre" id="genre" class="genre"></select>
-        <button class="genre-btn genre">Submit</button>
+        <div class="filter">
+          <label for="genre" class="genre">Filter by genre</label>
+          <select name="genre" id="genre" class="genre"></select>
+          <button class="genre-btn genre">Submit</button>
+        </div>
         <a href="add_book.html" class="add-book genre">Add New Book</a>
-        <a href="view_authors.html" class="view-authors genre">Authors</a>
+        <a href="view_authors.html" class="view-authors genre">View Authors</a>
         <!-- <button class="add-book-btn genre">Add book</button> -->
       </nav>
       <section class="book-container"></section>
     </main>
+    <footer><h2>©️ VB 2022</h2></footer>
   </body>
 </html>
