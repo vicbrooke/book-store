@@ -31,10 +31,6 @@ Book.init(
       type: DataTypes.FLOAT,
       defaultValue: 0,
     },
-    reviews: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0,
-    },
   },
   { sequelize: db }
 );

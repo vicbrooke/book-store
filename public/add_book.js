@@ -9,7 +9,6 @@ submitBookBtn.addEventListener("click", async () => {
   const genre = document.getElementById("bkGenre").value;
   const price = document.getElementById("bkPrice").value;
   const rating = document.getElementById("bkRating").value;
-  const reviews = document.getElementById("bkReviews").value;
 
   const body = {};
   if (title !== "") {
@@ -37,9 +36,6 @@ submitBookBtn.addEventListener("click", async () => {
   }
   if (rating !== "") {
     Object.assign(body, { rating: rating });
-  }
-  if (reviews !== "") {
-    Object.assign(body, { reviews: reviews });
   }
   await fetch(`${url}/books`, {
     method: "POST",

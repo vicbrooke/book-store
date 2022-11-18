@@ -5,7 +5,6 @@ const books = [
     genre: "mystery",
     price: 9.99,
     rating: 4.3,
-    reviews: 0,
     AuthorId: 1,
   },
   {
@@ -15,7 +14,6 @@ const books = [
     genre: "mystery",
     price: 10.0,
     rating: 4.7,
-    reviews: 0,
     AuthorId: 2,
   },
   {
@@ -24,7 +22,6 @@ const books = [
     genre: "mystery",
     price: 9.99,
     rating: 4.5,
-    reviews: 0,
     AuthorId: 3,
   },
   {
@@ -34,7 +31,6 @@ const books = [
     genre: "thriller",
     price: 4.5,
     rating: 4.5,
-    reviews: 0,
     AuthorId: 4,
   },
 
@@ -44,7 +40,6 @@ const books = [
     genre: "thriller",
     price: 11.99,
     rating: 4.7,
-    reviews: 0,
     AuthorId: 5,
   },
   {
@@ -54,7 +49,6 @@ const books = [
     genre: "fantasy",
     price: 7.99,
     rating: 3.5,
-    reviews: 0,
     AuthorId: 6,
   },
   {
@@ -64,7 +58,6 @@ const books = [
     genre: "historical fiction",
     price: 7.49,
     rating: 4.5,
-    reviews: 0,
     AuthorId: 10,
   },
   {
@@ -74,7 +67,6 @@ const books = [
     genre: "classic",
     price: 14.99,
     rating: 4.8,
-    reviews: 0,
     AuthorId: 7,
   },
   {
@@ -84,7 +76,6 @@ const books = [
     genre: "classic",
     price: 14.99,
     rating: 4.8,
-    reviews: 0,
     AuthorId: 8,
   },
   {
@@ -94,7 +85,6 @@ const books = [
     genre: "autobiography",
     price: 16.99,
     rating: 5.0,
-    reviews: 0,
     AuthorId: 9,
   },
 ];
