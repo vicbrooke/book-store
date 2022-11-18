@@ -13,7 +13,13 @@ submitBookBtn.addEventListener("click", async () => {
 
   const body = {};
   if (title !== "") {
-    Object.assign(body, { title: title });
+    let words = title.split(" ");
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+    words = words.join(" ");
+    console.log(words);
+    Object.assign(body, { title: words });
   }
   if (author !== "") {
     Object.assign(body, { author: author });
@@ -22,10 +28,12 @@ submitBookBtn.addEventListener("click", async () => {
     Object.assign(body, { image: image });
   }
   if (genre !== "") {
-    Object.assign(body, { genre: genre });
+    Object.assign(body, { genre: genre.toLowerCase() });
   }
   if (price !== "") {
-    Object.assign(body, { price: price });
+    const newPrice = Number(price).toFixed(2);
+    console.log(newPrice, typeof newPrice);
+    Object.assign(body, { price: newPrice });
   }
   if (rating !== "") {
     Object.assign(body, { rating: rating });
