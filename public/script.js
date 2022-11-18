@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     .then(({ allBooks }) =>
       allBooks.map((book) => {
         const listItem = document.createElement("li");
-        listItem.innerHTML = `<h3>${book.title}</h3> <img src="${book.image}" class="book-image"> <p>Genre: ${book.genre}</p> <p>Price: ${book.price}</p> <p>Rating: ${book.rating}</p> <p>Reviews: ${book.reviews}</p>`;
+        listItem.innerHTML = `<h3>${book.title}</h3> <img src="${book.image}" class="book-image"> <p>Genre: ${book.genre}</p> <p>Price: £${book.price}</p> <p>Rating: ${book.rating}</p> <p>Reviews: ${book.reviews}</p>`;
         bookContainer.append(listItem);
       })
     );
