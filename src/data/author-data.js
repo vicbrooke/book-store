@@ -47,6 +47,7 @@ const authors = [
     image:
       "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2F232433c4-52b9-11ea-90ad-25e377c0ee1f?fit=scale-down&source=next&width=700",
   },
+  { name: "Tom Allen", image: "" },
 ];
 
 module.exports = authors;
