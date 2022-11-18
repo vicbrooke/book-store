@@ -40,6 +40,10 @@ li {
   max-width: 90vw;
 }
 
+h3 {
+  max-width: 15vw;
+}
+
 .book-container {
   width: 100%;
   height: 100%;

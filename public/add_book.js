@@ -44,7 +44,7 @@ submitBookBtn.addEventListener("click", async () => {
     .then(({ newBook }) => {
       const addedBook = document.createElement("div");
       addedBook.innerHTML = `
-  <h3>Congrats, your book was added!</h3>
+  <h2>Congrats, your book was added!</h2>
   <div class="book-title">${newBook.title}</div>
   <p>Go to the <a href="index.html">home page</a> to view all books.</p>
   `;
